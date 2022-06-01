@@ -7,9 +7,9 @@
 <body>
     <h1>Note pad</h1>
     {% if user.is_authenticated %}
-    <a href="{% url 'accounts:logout' %}">logout</a>
+    <a href="accounts/logout">logout</a>
     {% else %}
-     <a href="{% url 'accounts:login' %}">login</a>
+     <a href="/accounts/login/">login</a>
     {% endif %}
     <hr>
     {% if memo_list %}
@@ -64,7 +64,7 @@
     {% if user.is_authenticated %}
     <a href="{% url 'note:create' %}">글쓰기</a>
     {% else %}
-    <a href="{% url 'accounts:login' %}">글쓰기</a>
+    <a href="/accounts/login/">글쓰기</a>
     {% endif %}
 </body>
 </html>
